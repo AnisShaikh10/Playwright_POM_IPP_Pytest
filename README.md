@@ -38,17 +38,18 @@ in modern QA teams.
 
 ------------------------------------------------------------------------
 
-# 📁 Project Architecture
-
+## 📁 Project Architecture
+```
 Playwright_POM_IPP_Pytest/
 │
-├── pages/            # Page Object classes (UI actions)
-├── tests/            # Test scenarios
-├── utils/            # Reusable helpers
-├── conftest.py       # Shared fixtures (browser setup/teardown)
-├── pytest.ini        # Pytest configuration
-├── requirements.txt  # Dependencies
+├── pages/ # Page Object classes (UI actions)
+├── tests/ # Test scenarios
+├── utils/ # Reusable helpers
+├── conftest.py # Shared fixtures (browser setup/teardown)
+├── pytest.ini # Pytest configuration
+├── requirements.txt # Dependencies
 └── .gitignore
+```
 
 🔹 Architecture Flow:
 Test File → Page Object → Playwright Actions → Browser
