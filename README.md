@@ -16,10 +16,10 @@ Model (POM)** design pattern.
 
 It demonstrates:
 
--   Clean automation architecture\
--   Separation of test logic and UI interactions\
--   Reusable fixtures and utilities\
--   Scalable test structure for enterprise applications\
+-   Clean automation architecture
+-   Separation of test logic and UI interactions
+-   Reusable fixtures and utilities
+-   Scalable test structure for enterprise applications
 -   Support for parallel execution and reporting
 
 This framework reflects real-world automation engineering practices used
@@ -29,22 +29,26 @@ in modern QA teams.
 
 # 🧠 Tech Stack
 
--   **Language:** Python\
--   **Automation Tool:** Playwright\
--   **Test Framework:** Pytest\
--   **Design Pattern:** Page Object Model (POM)\
--   **Reporting:** pytest-html (optional)\
+-   **Language:** Python
+-   **Automation Tool:** Playwright
+-   **Test Framework:** Pytest
+-   **Design Pattern:** Page Object Model (POM)
+-   **Reporting:** pytest-html (optional)
 -   **Parallel Execution:** pytest-xdist
 
 ------------------------------------------------------------------------
 
 # 📁 Project Architecture
 
-Playwright_POM_IPP_Pytest/ │ ├── pages/ \# Page Object classes (UI
-actions) ├── tests/ \# Test scenarios ├── utils/ \# Reusable helpers ├──
-conftest.py \# Shared fixtures (browser setup/teardown) ├── pytest.ini
-\# Pytest configuration ├── requirements.txt \# Dependencies └──
-.gitignore
+Playwright_POM_IPP_Pytest/
+│
+├── pages/            # Page Object classes (UI actions)
+├── tests/            # Test scenarios
+├── utils/            # Reusable helpers
+├── conftest.py       # Shared fixtures (browser setup/teardown)
+├── pytest.ini        # Pytest configuration
+├── requirements.txt  # Dependencies
+└── .gitignore
 
 🔹 Architecture Flow:
 Test File → Page Object → Playwright Actions → Browser
@@ -74,7 +78,7 @@ python -m venv venv
 
 Activate:
 
-Windows: venv`\Scripts`{=tex}`\activate`{=tex}
+Windows: venv`Scripts`{=tex}`activate`{=tex}
 
 Mac/Linux: source venv/bin/activate
 
@@ -128,10 +132,10 @@ pytest --html=report.html
 
 # 📌 Future Enhancements
 
--   GitHub Actions CI\
--   Allure reporting\
--   Environment-based configuration\
--   Docker support\
+-   GitHub Actions CI
+-   Allure reporting
+-   Environment-based configuration
+-   Docker support
 -   Cross-browser execution matrix
 
 ------------------------------------------------------------------------
