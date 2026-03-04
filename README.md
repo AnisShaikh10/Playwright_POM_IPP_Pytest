@@ -66,6 +66,34 @@ This structure ensures:
 
 ------------------------------------------------------------------------
 
+## 🎯 Project Purpose
+
+This automation framework is currently implemented for:
+
+**IPP Applicant Creation Workflow Automation**
+
+The framework automates the end-to-end process of creating an IPP applicant through a web-based application, validating UI behavior, form submissions, and workflow transitions.
+
+### 🔄 Framework Reusability
+
+Although currently built for IPP Applicant creation, this framework is **application-agnostic** and can be easily extended to automate:
+
+- Any web-based enterprise application  
+- Form-driven workflows  
+- Multi-step business processes  
+- Role-based application flows  
+- Regression and smoke test suites  
+
+Because it follows the **Page Object Model (POM)** architecture and modular fixture design, new applications can be automated by simply:
+
+- Creating new Page Object classes  
+- Writing new test scenarios  
+- Reusing existing framework utilities  
+
+This makes the framework scalable, reusable, and production-ready.
+
+------------------------------------------------------------------------
+
 # 🚀 Getting Started
 
 ## 1️⃣ Clone Repository
