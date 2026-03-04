@@ -45,6 +45,7 @@ Playwright_POM_IPP_Pytest/
 ├── pages/ # Page Object classes (UI actions)
 ├── tests/ # Test scenarios
 ├── utils/ # Reusable helpers
+├── screenshots/   ← created automatically
 ├── conftest.py # Shared fixtures (browser setup/teardown)
 ├── pytest.ini # Pytest configuration
 ├── requirements.txt # Dependencies
@@ -91,6 +92,28 @@ Because it follows the **Page Object Model (POM)** architecture and modular fixt
 - Reusing existing framework utilities  
 
 This makes the framework scalable, reusable, and production-ready.
+
+## 📸 Automatic Screenshot Capture
+
+This framework automatically captures screenshots for **all test executions**.
+
+### ✅ Behavior
+
+- Captures screenshots on test failure  
+- Can be configured to capture on success (if required)  
+- Saves screenshots with timestamp-based naming  
+- Stores screenshots in a structured directory  
+
+### 🎯 Why This Matters
+
+Automatic screenshot capture helps in:
+
+- Faster debugging  
+- Better failure analysis  
+- Visual validation of UI state  
+- Improved reporting and traceability  
+
+This makes the framework more robust and production-ready for CI/CD pipelines.
 
 ------------------------------------------------------------------------
 
