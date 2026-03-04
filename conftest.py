@@ -54,4 +54,7 @@ def pytest_runtest_makereport(item, call):
             )
 
             page.screenshot(path=file_path)
+            report.sections.append(
+                ("Screenshot", f"Saved at: {file_path}")
+            )
             print(f"\n📸 Screenshot saved to: {file_path}")
