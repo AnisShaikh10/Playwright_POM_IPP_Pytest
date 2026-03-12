@@ -83,7 +83,7 @@ def test_submit_application(page, user_data, residence_details, text_statement):
         # Login
         login_page = LoginPage(page)
         login_page.navigate_to_login_page(url=login_url)
-        login_page.fill_login_details(username=user_data.email, password="Infuse@12345")
+        login_page.fill_login_details(username=user_data.email, password="TestPassword@12345")
         login_page.verify_login_successful()
         # Retry flow
         complete_application_flow(page, residence_details, text_statement)
