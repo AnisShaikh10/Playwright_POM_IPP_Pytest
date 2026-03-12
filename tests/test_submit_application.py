@@ -16,23 +16,10 @@ from pages.reference_page import ReferencePage
 from pages.additional_information_page import AdditionalInformationPage
 from pages.submit_application_page import SubmitApplicationPage
 
-triabl_url = "https://web.test.padopt.scpd.sits.tribalpoc.com/urd/sits.urd/run/siw_lgn"
-plymouth_url = "https://evision.uat.plymouth.tribalsits.com/urd/sits.urd/run/siw_lgn"
+login_url = "Your Login URL"
 
-uop_pgr_ipp_link = (
-    "https://evision.uat.plymouth.tribalsits.com/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=DFPLY006426&code2=0005&code3=SITS"
-)
-
-uop_ug_ipp_link = (
-    "https://evision.uat.plymouth.tribalsits.com/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=DFPLY007206&code2=0001&code3=SITS"
-)
-
-uop_pgt_ipp_link = (
-    "https://evision.uat.plymouth.tribalsits.com/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=DFPLY004797&code2=0002&code3=SITS"
-)
-
-tribal_ipp_link = (
-    "https://web.test.padopt.scpd.sits.tribalpoc.com/urd/sits.urd/run/siw_lgn.login?process=siw_ipp_app&code1=DFPLY006426&code2=0005&code3=SITS"
+ipp_link_url = (
+    "Your IPP Link URL"
 )
 
 def complete_application_flow(page, residence_details, text_statement):
@@ -79,7 +66,7 @@ def complete_application_flow(page, residence_details, text_statement):
 def test_submit_application(page, user_data, residence_details, text_statement):
     # Create user and fill personal details
     create_user_page = CreateUserPage(page)
-    create_user_page.navigate_to_ipp_link(url=uop_pgr_ipp_link)
+    create_user_page.navigate_to_ipp_link(url=ipp_link_url)
     create_user_page.fill_user_details(user_data)
     create_user_page.submit_form()
     create_user_page.expect_success_message()
@@ -95,7 +82,7 @@ def test_submit_application(page, user_data, residence_details, text_statement):
         print("⚠ Form filling failed. Retrying via login...")
         # Login
         login_page = LoginPage(page)
-        login_page.navigate_to_login_page(url=plymouth_url)
+        login_page.navigate_to_login_page(url=login_url)
         login_page.fill_login_details(username=user_data.email, password="Infuse@12345")
         login_page.verify_login_successful()
         # Retry flow
